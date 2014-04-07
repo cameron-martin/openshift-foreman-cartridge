@@ -10,7 +10,7 @@ Version: '0.63.0'
 Source-Url: https://github.com/ncdc/openshift-foreman-cartridge/archive/master.zip
 Vendor: David Dollar
 Categories:
-  - embedded
+  - plugin
 Website: https://github.com/ncdc/openshift-foreman-cartridge
 Provides:
   - foreman-0.63
