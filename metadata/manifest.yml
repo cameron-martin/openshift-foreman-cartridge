@@ -1,13 +1,13 @@
 Name: foreman
 Cartridge-Short-Name: FOREMAN
-Cartridge-Version: 0.1
-Cartridge-Vendor: andygoldstein
+Cartridge-Version: '0.1.1'
+Cartridge-Vendor: cameronmartin
 Display-Name: Foreman
 Description: "Foreman TODO"
 License: "ASL 2.0"
 License-Url: http://www.apache.org/licenses/LICENSE-2.0.txt
 Version: '0.63.0'
-Source-Url: https://github.com/ncdc/openshift-foreman-cartridge/archive/master.zip
+Source-Url: https://github.com/cameron-martin/openshift-foreman-cartridge/archive/master.zip
 Vendor: David Dollar
 Categories:
   - plugin
