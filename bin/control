@@ -20,11 +20,11 @@ function start() {
 
   if isrunning; then
     client_result "Foreman is already running"
-  elif [ ! -f $OPENSHIFT_REPO_DIR/Procfile ]; then
+  elif [ ! -f "$OPENSHIFT_REPO_DIR/$OPENSHIFT_FOREMAN_PROCFILE" ]; then
     client_result "Procfile not found"
   else
     pushd $OPENSHIFT_REPO_DIR > /dev/null
-    scl enable ruby193 "foreman start --root=$OPENSHIFT_REPO_DIR" > $OPENSHIFT_FOREMAN_LOG_DIR/foreman.log 2>&1 &
+    scl enable ruby193 "foreman start --root=$OPENSHIFT_REPO_DIR -f $OPENSHIFT_FOREMAN_PROCFILE" > $OPENSHIFT_FOREMAN_LOG_DIR/foreman.log 2>&1 &
     pid=$!
     echo "$pid" > $FOREMAN_PID_FILE
     popd > /dev/null

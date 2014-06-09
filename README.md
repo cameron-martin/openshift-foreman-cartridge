@@ -5,12 +5,14 @@ This cartridge for OpenShift allows you to configure and use [Foreman](https://g
 # Installation
 Once you have an existing OpenShift application, run the following command:
 
-    rhc cartridge add -a app_name http://cartreflect-claytondev.rhcloud.com/reflect?github=ncdc/openshift-foreman-cartridge
+    rhc cartridge add -a app_name http://cartreflect-claytondev.rhcloud.com/reflect?github=cameron-martin/openshift-foreman-cartridge
 
 # Usage
 In the root of your application's git repository, create a file called Procfile. Then add one or more entries such as:
 
     mytask: bundle exec rake resque:work QUEUE=*
+
+To change the Procfile that is loaded, change the `$OPENSHIFT_FOREMAN_PROCFILE` environment variable
 
 # Logging
 Output from Foreman is written to $OPENSHIFT_HOMEDIR/foreman/log/foreman.log
