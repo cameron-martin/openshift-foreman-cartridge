@@ -12,10 +12,11 @@ In the root of your application's git repository, create a file called Procfile.
 
     mytask: bundle exec rake resque:work QUEUE=*
 
-To change the Procfile that is loaded, change the `$OPENSHIFT_FOREMAN_PROCFILE` environment variable
+To change the Procfile that is loaded, change the `$OPENSHIFT_FOREMAN_PROCFILE` environment variable.
+The default value is `Procfile`
 
 # Logging
-Output from Foreman is written to $OPENSHIFT_HOMEDIR/foreman/log/foreman.log
+Output from Foreman is written to `$OPENSHIFT_FOREMAN_LOG_DIR/foreman.log`
 
 # Limitations
 This cartridge does not currently listen on any ports.
